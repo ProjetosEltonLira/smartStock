@@ -10,3 +10,9 @@ Ferramenta gráfica para gerenciar e visualizar os dados no MongoDB. (https://ww
 - cd docker
 - docker-compose up
 
+
+
+
+* REGRAS DO PROJETO
+![img.png](img.png)
+ 
