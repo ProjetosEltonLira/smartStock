@@ -8,13 +8,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients
 
 @SpringBootApplication
 @EnableFeignClients
-class SmartStockApplication (private var googleClient: GoogleClient) : CommandLineRunner {
-
-
-	override fun run(vararg args: String?) {
-		googleClient.helloGoogle()
-	}
-}
+class SmartStockApplication
 
 fun main(args: Array<String>) {
 	runApplication<SmartStockApplication>(*args)
