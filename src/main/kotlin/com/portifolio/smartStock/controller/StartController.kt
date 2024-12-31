@@ -16,8 +16,9 @@ class StartController (
     @PostMapping(path = ["/start"])
     fun start(@RequestBody dto: StartDto) : ResponseEntity<Void>{
 
+        //fire and forget.
         CompletableFuture.runAsync {
-            smartStockService.process(dto.reportPath)
+            smartStockService.start(dto.reportPath)
         }
 
         return ResponseEntity.accepted().build()     //Utilizado quando temos comportamento assincrono, damos a resposta rapida de que a chamada foi aceita

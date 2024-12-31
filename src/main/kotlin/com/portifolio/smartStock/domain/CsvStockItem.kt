@@ -28,6 +28,7 @@ data class CsvStockItem(
 ) {
 
 
+
     override fun toString(): String {
         return "CsvStockItem(itemId='$itemId', itemName='$itemName', quantity=$quantity, reorderThreshold=$reorderThreshold, supplierName='$supplierName', supplierEmail='$supplierEmail', lastStockUpdateTime='$lastStockUpdateTime')"
     }
