@@ -10,7 +10,8 @@ Ferramenta gráfica para gerenciar e visualizar os dados no MongoDB. (https://ww
 - cd docker
 - docker-compose up
 
-
+* Configurar as variáveis de ambiente
+- APP_CLIENT_ID=ABC;APP_CLIENT_SECRET=DEF
 
 
 * REGRAS DO PROJETO

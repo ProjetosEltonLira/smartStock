@@ -8,13 +8,9 @@ import org.springframework.cloud.openfeign.EnableFeignClients
 
 @SpringBootApplication
 @EnableFeignClients
-class SmartStockApplication (private var appConfig: AppConfig) : CommandLineRunner {
+class SmartStockApplication
 
-	override fun run(vararg args: String?) {
-		println( appConfig.clientId)
-		println( appConfig.clientSecret)
-	}
-}
+
 
 fun main(args: Array<String>) {
 	runApplication<SmartStockApplication>(*args)

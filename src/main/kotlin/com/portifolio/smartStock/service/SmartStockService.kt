@@ -6,9 +6,10 @@ import kotlin.math.ceil
 
 
 @Service
-class SmartStockService(private val reportService: ReportService) {
+class SmartStockService(private val reportService: ReportService,
+                        private val purchaseSectorService: PurchaseSectorService) {
 
-    private final var PERCENTUAL_RECOMPRA_COM_MARGEM_SEGURANCA: Double = 0.2
+    private final val PERCENTUAL_RECOMPRA_COM_MARGEM_SEGURANCA: Double = 0.2
 
     fun start(reportPath: String) {
 
@@ -20,6 +21,12 @@ class SmartStockService(private val reportService: ReportService) {
 
                     var reorderQuantity = calculateReorderQuantity(item.reorderThreshold)
                     println(reorderQuantity)
+
+                    var compraRealizada = purchaseSectorService.sendPurchaseRequest(
+                        item = item,
+                        purchaseQuantity = reorderQuantity
+                    )
+
                 }
             }
         }
