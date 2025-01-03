@@ -26,7 +26,6 @@ class SmartStockService(private val reportService: ReportService,
                         item = item,
                         purchaseQuantity = reorderQuantity
                     )
-
                 }
             }
         }
