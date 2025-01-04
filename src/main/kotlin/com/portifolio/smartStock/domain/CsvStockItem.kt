@@ -1,6 +1,7 @@
 package com.portifolio.smartStock.domain
 
 import com.opencsv.bean.CsvBindByName
+import java.time.LocalDateTime
 
 data class CsvStockItem(
 
@@ -23,7 +24,7 @@ data class CsvStockItem(
     var supplierEmail: String= "",
 
     @CsvBindByName (column = "last_stock_update_time")
-    var lastStockUpdateTime: String = ""
+    var lastStockUpdateTime: String= ""
 
 ) {
 

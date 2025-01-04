@@ -18,9 +18,9 @@ class PurchaseSectorService (private var authService: AuthService,
     fun sendPurchaseRequest(item: CsvStockItem, purchaseQuantity : Int) : Boolean {
 
         // authencation
-        var token = authService.getAuth()
+        val token = authService.getAuth()
 
-        var requestBody = PurchaseRequest(
+        val requestBody = PurchaseRequest(
             itemId = item.itemId,
             itemName = item.itemName,
             supplierName = item.supplierName ,
@@ -28,7 +28,7 @@ class PurchaseSectorService (private var authService: AuthService,
             quantity = purchaseQuantity
         )
         //enviar solicitação de compra
-        var purchaseResponse = purchaseSectorClient.purchase(
+        val purchaseResponse = purchaseSectorClient.purchase(
             request = requestBody,
             authorization = token
         )
